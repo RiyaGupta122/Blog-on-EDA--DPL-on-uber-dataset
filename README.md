@@ -94,6 +94,7 @@ A correlation matrix for Uber refers to a statistical analysis that examines the
 correlation_matrix=data[['trip_distance','fare_amount','tip_amount','total_amount']].corr() correlation_matrix
 
 D. SCATTER PLOT.
+
 Now we will see the density of pickup in NYC using scatter plot (this will give us an idea of where we shall place more of our Vendors and where we shall increase the prices per ride)
 
 
