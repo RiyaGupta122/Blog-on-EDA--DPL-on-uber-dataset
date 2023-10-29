@@ -14,6 +14,7 @@ Before we embark on our journey, it's essential to understand the dataset at han
 - Size: The dataset is substantial, containing 4169 rows and 19 columns. 
 - Data Type: It's structured data, comprising information about rides, such as 
 Trip pickup datetime and drop-off , passenger count, trip distance, pickup longitude, pickup latitude, ratecode-Id,toll amount, trip amount, fare amount and more.
+
 Exploratory Data Analysis (EDA)
 
 EDA is the compass that guides us through the labyrinth of data. Let's begin with the first steps:
@@ -78,9 +79,12 @@ plt.xlabel('Payment Type')
 plt.ylabel('Number of Transactions')
 plt.show()
 
+<img width="277" alt="image" src="https://github.com/RiyaGupta122/Blog-on-EDA--DPL-on-uber-dataset/assets/149296023/f1167d9f-2da0-4b32-819e-34c5d38598c9">
+
 
 
 C. CORRELATION MATRIX.
+
 A correlation matrix for Uber refers to a statistical analysis that examines the relationships between various factors or variables within Uber's operations or business data. This matrix provides valuable insights into how different variables are related to each other, whether positively or negatively. 
 
 #Compute the correlation matrix 
@@ -100,7 +104,9 @@ fig.update_yaxes(range=[40.58, 40.90])
  fig.show()
 
 E. MOST TRAVELLED/ RUSH TIME.
+
 Now we will see the hourly ride count in NYC using time series plot using Plotly to see at which time do the people travel the most
+
 #Extract the hour
 data['pickup_hour'] = pd.to_datetime(data['tpep_pickup_datetime']).dt.hour
 
@@ -151,6 +157,7 @@ C.	Filtering trips in an Uber dataset based on fare amount involves selecting an
 
         expensive_trips = data[data['fare_amount'] > 200]
         print(expensive_trips)
+        
 
 D.	Dropping NULL (missing) values from a dataset and saving the cleaned dataset as a new dataset is a common data preprocessing step in data analysis. This process ensures that your data is free from missing or incomplete information, making it more suitable for analysis or modeling.
 
@@ -160,7 +167,10 @@ D.	Dropping NULL (missing) values from a dataset and saving the cleaned dataset 
          cleaned_data = data[data['tolls_amount'] != 0]
 
         cleaned_data.to_csv('path_to_save_cleaned_dataset.csv', index=False)
+
+        
 E.	Replacing missing (NULL) values in a dataset with the mean values of non-null entries is a common technique for handling missing data. This approach helps maintain the overall data structure and can be useful when the number of missing values is relatively small or when the missing values are missing at random
+
 data = pd.read_csv('/content/updated_vendor_dataset_dpl_eda.csv')
 
 #Calculate the mean
@@ -173,6 +183,7 @@ data.to_csv('path_to_save_modified_dataset.csv', index=False)
 
 
 F.	Plotting a heatmap is a useful way to visualize the difference between two datasets, such as the original dataset and a cleaned dataset with missing values replaced by column means. Heatmaps provide a graphical representation of the data, showing variations in values through colors. In our case, it can help you compare the distribution of values before and after cleaning.
+
 
  #Load the dataset with dropped null values
 data_dropped = pd.read_csv('/content/path_to_save_cleaned_dataset.csv')
