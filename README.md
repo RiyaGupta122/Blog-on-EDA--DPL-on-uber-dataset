@@ -56,6 +56,8 @@ plt.ylabel('Number of Rides')
 plt.tight_layout()
 plt.show()
 ```
+<img width="137" alt="image" src="https://github.com/RiyaGupta122/Blog-on-EDA--DPL-on-uber-dataset/assets/149296023/1ac51e98-cc05-4102-8a42-b716f62b23ca">
+
  B. Fare Distribution
 
 Visualizing the fare distribution gives us insights into how much passengers typically pay for Uber rides.
@@ -103,6 +105,8 @@ fig.update_xaxes(range=[-74.10, -73.70])
 fig.update_yaxes(range=[40.58, 40.90])
  fig.show()
 
+<img width="300" alt="image" src="https://github.com/RiyaGupta122/Blog-on-EDA--DPL-on-uber-dataset/assets/149296023/53e26aa5-148b-409b-9fb0-ffc88d4b5311">
+
 E. MOST TRAVELLED/ RUSH TIME.
 
 Now we will see the hourly ride count in NYC using time series plot using Plotly to see at which time do the people travel the most
@@ -117,6 +121,9 @@ hourly_rides = data.groupby('pickup_hour').size().reset_index(name='ride_count')
 fig = px.line(hourly_rides, x='pickup_hour', y='ride_count', title='Hourly Ride Counts in NYC')
 
 fig.show()
+
+<img width="906" alt="image" src="https://github.com/RiyaGupta122/Blog-on-EDA--DPL-on-uber-dataset/assets/149296023/08a19aee-c48c-4490-a7b5-95a02a3af3af">
+
 
 Data Preprocessing (DPL)
 
@@ -206,6 +213,8 @@ plt.xlabel('Dataset Difference')
 plt.ylabel('Entries')
 plt.show()
 
+<img width="328" alt="image" src="https://github.com/RiyaGupta122/Blog-on-EDA--DPL-on-uber-dataset/assets/149296023/efc4f704-d839-4132-bad0-46c64805e6c8">
+
 
 G.	Creating a scatter plot to visualize the difference between two datasets can be a useful way to compare the values of corresponding data points in the two datasets. This type of plot allows you to identify discrepancies between the datasets, revealing how data points deviate from a perfect one-to-one correspondence.
 
@@ -231,6 +240,8 @@ plt.xlabel('Tolls Amount (Dropped Null Values)')
 plt.ylabel('Tolls Amount (Replaced with Mean)')
 plt.grid(True)
 plt.show()
+
+<img width="320" alt="image" src="https://github.com/RiyaGupta122/Blog-on-EDA--DPL-on-uber-dataset/assets/149296023/4668b954-7795-4e01-9188-420e5d033a95">
 
 
 H.	WE TRAIN AND TEST THE MODEL
