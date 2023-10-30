@@ -91,7 +91,8 @@ A correlation matrix for Uber refers to a statistical analysis that examines the
 
 #Compute the correlation matrix 
 
-correlation_matrix=data[['trip_distance','fare_amount','tip_amount','total_amount']].corr() correlation_matrix
+correlation_matrix=data[['trip_distance','fare_amount','tip_amount','total_amount']].corr()
+correlation_matrix
 
 D. SCATTER PLOT.
 
