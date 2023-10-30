@@ -100,6 +100,7 @@ Now we will see the density of pickup in NYC using scatter plot (this will give 
 
 
 import plotly.express as px 
+
 #scatter plot of pickup locations 
 fig = px.scatter(data, x='pickup_longitude', y='pickup_latitude',                                                                                .                          title='Density of Pickups in NYC',                 
                            opacity=0.1, height=600, width=800) #Define the boundries 
